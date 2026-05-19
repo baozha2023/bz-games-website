@@ -11,7 +11,9 @@ var Achievements = (function () {
   ];
 
   var SPECIALS = {
-    "logo-explode": { id: "logo-boom", title: "大爆炸", icon: "\uD83D\uDCA5" }
+    "logo-explode": { id: "logo-boom", title: "大爆炸", icon: "\uD83D\uDCA5" },
+    "console-open": { id: "hacker", title: "黑客入门", icon: "\u2328\uFE0F" },
+    "console-all-cmds": { id: "terminal-master", title: "终端大师", icon: "\uD83C\uDF9B\uFE0F" }
   };
 
   var TETRIS_MILESTONES = [
@@ -96,12 +98,16 @@ var Achievements = (function () {
     }
   });
 
-  EventBus.on("logo-explode", function () {
-    var s = SPECIALS["logo-explode"];
+  function onSpecial(event) {
+    var s = SPECIALS[event];
     if (s && !unlocked[s.id]) {
       show(s.id, s.title, s.icon);
     }
-  });
+  }
+
+  EventBus.on("logo-explode", function () { onSpecial("logo-explode"); });
+  EventBus.on("console-open", function () { onSpecial("console-open"); });
+  EventBus.on("console-all-cmds", function () { onSpecial("console-all-cmds"); });
 
   EventBus.on("tetris-score", function (data) {
     var s = data.score || 0;

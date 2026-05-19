@@ -1,5 +1,8 @@
 var DevConsole = (function () {
   var visible = false;
+  var consoleOpened = false;
+  var usedCmds = {};
+  var ALL_CMDS = ["help", "clear", "konami", "food.count", "snake.speed", "snake.color", "snake.size"];
   var overlay = null;
   var output = null;
   var input = null;
@@ -108,6 +111,15 @@ var DevConsole = (function () {
     output.scrollTop = output.scrollHeight;
   }
 
+  function markCmd(id) {
+    if (usedCmds[id]) return;
+    usedCmds[id] = true;
+    for (var i = 0; i < ALL_CMDS.length; i++) {
+      if (!usedCmds[ALL_CMDS[i]]) return;
+    }
+    try { EventBus.emit("console-all-cmds", {}); } catch (ex) {}
+  }
+
   function execute(cmd) {
     history.unshift(cmd);
     if (history.length > 50) history.pop();
@@ -124,6 +136,7 @@ var DevConsole = (function () {
     var arg = (parts[3] || "").trim().replace(/^["']|["']$/g, "");
 
     if (ns === "help" || (ns === "h" && !fn)) {
+      markCmd("help");
       print("Available commands:", "dev-console-info");
       print("  help                   - Show this help", "dev-console-info");
       print("  clear                  - Clear console output", "dev-console-info");
@@ -136,17 +149,20 @@ var DevConsole = (function () {
     }
 
     if (ns === "clear") {
+      markCmd("clear");
       output.innerHTML = "";
       return;
     }
 
     if (ns === "konami") {
+      markCmd("konami");
       print("🎮 Triggering easter egg...", "dev-console-success");
       EventBus.emit("trigger-easter-egg", { clearText: true });
       return;
     }
 
     if (ns === "food" && fn === "count") {
+      markCmd("food.count");
       print("Remaining food: " + FoodManager.count(), "dev-console-info");
       return;
     }
@@ -155,6 +171,7 @@ var DevConsole = (function () {
       if (fn === "speed") {
         var ms = parseInt(arg, 10);
         if (isNaN(ms) || ms < 10) { print("Invalid speed. Use a number >= 10 (ms).", "dev-console-error"); return; }
+        markCmd("snake.speed");
         EventBus.emit("snake-speed", { ms: ms });
         print("Snake speed set to " + ms + "ms.", "dev-console-success");
         return;
@@ -162,6 +179,7 @@ var DevConsole = (function () {
       if (fn === "color") {
         var colorArg = resolveColor(arg);
         if (!colorArg) { print("Invalid color. Use hex (#ff0000) or color name (red, blue...).", "dev-console-error"); return; }
+        markCmd("snake.color");
         EventBus.emit("snake-color", { color: colorArg });
         print("Snake color set to " + colorArg + ".", "dev-console-success");
         return;
@@ -169,6 +187,7 @@ var DevConsole = (function () {
       if (fn === "size") {
         var sz = parseInt(arg, 10);
         if (isNaN(sz) || sz < 6 || sz > 80) { print("Invalid size. Use a number between 6 and 80.", "dev-console-error"); return; }
+        markCmd("snake.size");
         EventBus.emit("snake-size", { size: sz });
         print("Snake size set to " + sz + "px.", "dev-console-success");
         return;
@@ -183,6 +202,10 @@ var DevConsole = (function () {
   window.addEventListener("keydown", function (e) {
     if (e.key === "`" && !e.ctrlKey && !e.altKey && !e.metaKey) {
       e.preventDefault();
+      if (!consoleOpened) {
+        consoleOpened = true;
+        try { EventBus.emit("console-open", {}); } catch (ex) {}
+      }
       toggle();
       return;
     }
