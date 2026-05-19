@@ -1,0 +1,53 @@
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .types-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .arch-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .arch-column {
+    max-width: 100%;
+  }
+
+  .arch-connector {
+    flex-direction: row;
+    min-width: auto;
+    gap: 10px;
+  }
+
+  .arch-conn-line {
+    width: 60px;
+    height: 2px;
+  }
+
+  #snake-stage {
+    display: none;
+  }
+
+  .particle-stage {
+    display: none !important;
+  }
+
+  .logo-explosion-stage {
+    display: none !important;
+  }
+
+  .eat-counter {
+    display: none !important;
+  }
+}

@@ -1,0 +1,38 @@
+#snake-stage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.snake-seg {
+  position: absolute;
+  background: var(--accent2);
+  transition: none;
+}
+
+.snake-head {
+  background: var(--accent);
+  z-index: 2;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.snake-word {
+  display: inline;
+}
+
+.snake-word-group {
+  display: inline;
+}
+
+.snake-eaten.snake-eaten {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}

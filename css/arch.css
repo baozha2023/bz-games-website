@@ -1,0 +1,141 @@
+.arch-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.arch-column {
+  flex: 1;
+  max-width: 460px;
+}
+
+.arch-col-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.arch-block {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+}
+
+.arch-block-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text2);
+  margin-bottom: 10px;
+}
+
+.arch-process-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.arch-module {
+  flex: 1;
+  text-align: center;
+  padding: 8px 6px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+}
+
+.arch-module .sub {
+  color: var(--text2);
+  font-size: 10px;
+  font-weight: 400;
+  display: block;
+}
+
+.arch-module.highlight {
+  border-color: var(--accent);
+  background: var(--card-hover);
+}
+
+.arch-arrow-h {
+  color: var(--text2);
+  font-size: 16px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.arch-arrow-out {
+  color: var(--accent);
+  font-size: 15px;
+  font-weight: 700;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  margin-left: 6px;
+}
+
+.arch-game-box {
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px dashed var(--border);
+  background: var(--bg2);
+  color: var(--text);
+}
+
+.arch-game-box .sub {
+  color: var(--text2);
+  font-size: 10px;
+  font-weight: 400;
+  display: block;
+}
+
+.arch-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  flex-shrink: 0;
+  gap: 6px;
+}
+
+.arch-conn-line {
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(to bottom, var(--accent), var(--accent2));
+}
+
+.arch-conn-box {
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--yellow);
+  background: rgba(245, 158, 11, 0.08);
+  color: var(--text);
+}
+
+.arch-conn-box .sub {
+  color: var(--text2);
+  font-size: 10px;
+  font-weight: 400;
+  display: block;
+}
+
+.arch-conn-label {
+  color: var(--text2);
+  font-size: 10px;
+  text-align: center;
+}

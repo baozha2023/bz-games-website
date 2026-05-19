@@ -1,0 +1,10 @@
+var SnakeConfig = {
+  GRID: 24,
+  SIZE: 22,
+  MOVE_MS: 110,
+  MARGIN: 32,
+  SCROLL_ZONE: 160,
+  SCROLL_SPEED: 1,
+  MIN_LENGTH: 6,
+  EAT_MARGIN: 12
+};

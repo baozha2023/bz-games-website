@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BZ-Games — 无服务器本地游戏平台</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/features.css">
+  <link rel="stylesheet" href="css/arch.css">
+  <link rel="stylesheet" href="css/types.css">
+  <link rel="stylesheet" href="css/stats.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/snake.css">
+  <link rel="stylesheet" href="css/counter.css">
+  <link rel="stylesheet" href="css/toast.css">
+  <link rel="stylesheet" href="css/tetris.css">
+  <link rel="stylesheet" href="css/easter-egg.css">
+  <link rel="stylesheet" href="css/extras.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div id="snake-stage"></div>
+
+<nav>
+  <div class="container">
+    <div class="nav-logo">BZ<span>-Games</span></div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#features">功能</a></li>
+        <li><a href="#games">游戏类型</a></li>
+        <li><a href="#arch">架构</a></li>
+      </ul>
+      <button class="theme-btn" id="themeToggle" title="切换主题" aria-label="切换主题">🌙</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <h1>你的游戏，<span>你的规则</span></h1>
+    <p>BZ-Games 是一个无服务器的本地游戏平台。导入、管理、联机 — 一切都存储在你自己的电脑上，无需云端账号。</p>
+    <div class="hero-buttons">
+      <a class="btn btn-primary" href="https://github.com/baozha2023/bz-games/releases/download/v2.0.3/BZ-Games-Setup-2.0.3.exe" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        下载 Windows 版
+      </a>
+      <a class="btn btn-outline" href="https://github.com/baozha2023/bz-games" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</header>
+
+<section id="features" class="features">
+  <div class="container">
+    <div class="section-header">
+      <h2>为什么选择 BZ-Games</h2>
+      <p>专为 Windows 打造的本地游戏管理体验</p>
+    </div>
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon fi-purple">📂</div>
+        <h3>开放式游戏库</h3>
+        <p>支持导入任意符合规范的本地游戏，自动识别版本、封面与元数据，拖拽即玩。</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon fi-green">🔌</div>
+        <h3>无服务器架构</h3>
+        <p>所有数据存储在你的电脑上。游戏记录、成就、BZ 币 — 完全私有，无需注册云端账户。</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon fi-yellow">🎮</div>
+        <h3>统一联机大厅</h3>
+        <p>内置房间系统：创建 / 加入 / 准备 / 开始。游戏开发者无需编写网络代码。</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon fi-blue">🌐</div>
+        <h3>灵活内网穿透</h3>
+        <p>通过标准 TCP 端口暴露房间，支持 SakuraFrp 等任意内网穿透工具，不锁定特定服务。</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon fi-teal">🏪</div>
+        <h3>游戏市场</h3>
+        <p>浏览并一键下载社区游戏。自动校验 SHA-256、解压、导入 — 全程无需手动操作。</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon fi-red">🏆</div>
+        <h3>成就与经济</h3>
+        <p>游戏内解锁成就、累计 BZ 币、每日签到。平台统一追踪你的游戏成就与统计。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="games">
+  <div class="container">
+    <div class="section-header">
+      <h2>支持四种游戏类型</h2>
+      <p>从单人休闲到多人在线 — 一个平台全搞定</p>
+    </div>
+    <div class="types-grid">
+
+      <div class="type-card">
+        <div class="icon">🧑</div>
+        <h3>单人游戏</h3>
+        <p>经典单机体验<br>无需联网</p>
+      </div>
+      <div class="type-card">
+        <div class="icon">👥</div>
+        <h3>多人游戏</h3>
+        <p>本地 / 联机多人<br>P2P 房间对战</p>
+      </div>
+      <div class="type-card">
+        <div class="icon">🔄</div>
+        <h3>单人多模式</h3>
+        <p>单人 + 联机双模式<br>灵活切换玩法</p>
+      </div>
+      <div class="type-card">
+        <div class="icon">🌍</div>
+        <h3>网络游戏</h3>
+        <p>远程网页游戏<br>Web URL 直接启动</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="arch" style="background: var(--bg2);">
+  <div class="container">
+    <div class="section-header">
+      <h2>房主即主机</h2>
+      <p>无需中心服务器，房主的电脑就是服务端。仅需一个内网穿透工具将端口暴露到公网</p>
+    </div>
+    <div class="arch-wrapper">
+
+      <div class="arch-column">
+        <div class="arch-col-title">🖥️ HOST 主机</div>
+        <div class="arch-block">
+          <div class="arch-block-title">Electron 平台进程</div>
+          <div class="arch-process-row">
+            <div class="arch-module">渲染进程<div class="sub">Vue UI</div></div>
+            <div class="arch-arrow-h">⟷ IPC</div>
+            <div class="arch-module highlight">
+              主进程
+              <div class="sub">GameManager · RoomServer · GameApiServer</div>
+            </div>
+            <div class="arch-arrow-out">→</div>
+            <div style="font-size: 10px; color: var(--text2); writing-mode: vertical-rl;">SakuraFrp</div>
+          </div>
+        </div>
+        <div class="arch-game-box" style="margin-top: 0;">
+          游戏进程 (game.exe)
+          <div class="sub">ws://127.0.0.1:{BZ_API_PORT}</div>
+          <div class="sub">通过 GameApiServer 进行所有联机通信</div>
+        </div>
+      </div>
+
+      <div class="arch-connector">
+        <div class="arch-conn-label">▲ ▼</div>
+        <div class="arch-conn-line"></div>
+        <div class="arch-conn-box">
+          SakuraFrp
+          <div class="sub">内网穿透</div>
+        </div>
+        <div class="arch-conn-line"></div>
+        <div class="arch-conn-label">公网地址</div>
+      </div>
+
+      <div class="arch-column">
+        <div class="arch-col-title">💻 CLIENT 客机（可多个）</div>
+        <div class="arch-block">
+          <div class="arch-block-title">Electron 平台进程</div>
+          <div class="arch-process-row">
+            <div class="arch-module">渲染进程<div class="sub">Vue UI</div></div>
+            <div class="arch-arrow-h">⟷ IPC</div>
+            <div class="arch-module">
+              主进程
+              <div class="sub">RoomClient · GameApiServer</div>
+            </div>
+          </div>
+          <div class="arch-process-row" style="justify-content: center; margin-bottom: 0;">
+            <div class="arch-module highlight" style="max-width: 200px;">
+              RoomClient
+              <div class="sub">连接至房主公网地址</div>
+            </div>
+          </div>
+        </div>
+        <div class="arch-game-box" style="margin-top: 0;">
+          游戏进程 (game.exe)
+          <div class="sub">ws://127.0.0.1:{BZ_API_PORT}</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-num">Windows</div>
+        <div class="stat-label">支持系统</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">开源</div>
+        <div class="stat-label">MIT 协议</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">本地</div>
+        <div class="stat-label">数据存储</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">多语言</div>
+        <div class="stat-label">中·英·日</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://github.com/baozha2023/bz-games" target="_blank">GitHub</a>
+      <a href="https://github.com/baozha2023/bz-games/releases" target="_blank">Releases</a>
+      <a href="https://github.com/baozha2023/bz-games-market" target="_blank">游戏市场</a>
+    </div>
+    <p>BZ-Games &copy; 2026 &nbsp;·&nbsp; Built with Electron + Vue 3 + TypeScript &nbsp;·&nbsp; MIT License</p>
+  </div>
+</footer>
+
+<script src="js/snake/config.js"></script>
+<script src="js/snake/state.js"></script>
+<script src="js/event-bus.js"></script>
+<script src="js/snake/Input.js"></script>
+<script src="js/snake/Snake.js"></script>
+<script src="js/snake/FoodManager.js"></script>
+<script src="js/counter.js"></script>
+<script src="js/sfx.js"></script>
+<script src="js/achievements.js"></script>
+<script src="js/easter-egg.js"></script>
+<script src="js/logo-click.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/dev-console.js"></script>
+<script src="js/tetris.js"></script>
+<script src="js/snake/main.js"></script>
+<script src="js/theme.js"></script>
+
+</body>
+</html>
