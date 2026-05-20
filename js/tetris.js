@@ -37,7 +37,7 @@ var MiniTetris = (function () {
     panel = document.createElement("div");
     panel.className = "tetris-panel";
     panel.innerHTML =
-      '<div class="tetris-bubble" title="俄罗斯方块">' +
+      '<div class="tetris-bubble" title="' + I18n.t("tetris.title") + '">' +
       '<div class="tetris-logo">' +
       '<span class="tl-block tl-cyan"></span><span class="tl-block tl-yellow"></span>' +
       '<span class="tl-block tl-purple"></span><span class="tl-block tl-green"></span>' +
@@ -45,16 +45,16 @@ var MiniTetris = (function () {
       '</div>' +
       '<div class="tetris-body">' +
       '<div class="tetris-header">' +
-      '<span class="tetris-title">俄罗斯方块</span>' +
+      '<span class="tetris-title">' + I18n.t("tetris.title") + '</span>' +
       '<span class="tetris-score">0</span>' +
       '<button class="tetris-close">&times;</button>' +
       '</div>' +
       '<div class="tetris-board"></div>' +
       '<div class="tetris-controls">' +
-      '<button class="tetris-btn" data-dir="-1" aria-label="左">◀</button>' +
-      '<button class="tetris-btn" data-dir="1" aria-label="下">▼</button>' +
-      '<button class="tetris-btn" data-dir="0" aria-label="旋转">↻</button>' +
-      '<button class="tetris-btn" data-dir="2" aria-label="右">▶</button>' +
+      '<button class="tetris-btn" data-dir="-1" aria-label="' + I18n.t("tetris.aria_left") + '">◀</button>' +
+      '<button class="tetris-btn" data-dir="1" aria-label="' + I18n.t("tetris.aria_down") + '">▼</button>' +
+      '<button class="tetris-btn" data-dir="0" aria-label="' + I18n.t("tetris.aria_rotate") + '">↻</button>' +
+      '<button class="tetris-btn" data-dir="2" aria-label="' + I18n.t("tetris.aria_right") + '">▶</button>' +
       '</div>' +
       '</div>';
     document.body.appendChild(panel);

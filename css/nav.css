@@ -70,3 +70,8 @@ nav .container {
   border-color: var(--accent);
   color: var(--text);
 }
+
+#langToggle {
+  font-size: 12px;
+  font-weight: 700;
+}

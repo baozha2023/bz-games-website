@@ -5,21 +5,21 @@ var Achievements = (function () {
   var counterEl = null;
 
   var MILESTONES = [
-    { count: 1, id: "first-bite", title: "初次捕食", icon: "\uD83C\uDF1F" },
-    { count: 100, id: "cleaner", title: "清盘大师", icon: "\uD83E\uDDE4" },
-    { count: 500, id: "big-eater", title: "大胃王", icon: "\uD83C\uDFC6" }
+    { count: 1, id: "first-bite", title: I18n.t("ach.first_bite"), icon: "\uD83C\uDF1F" },
+    { count: 100, id: "cleaner", title: I18n.t("ach.cleaner"), icon: "\uD83E\uDDE4" },
+    { count: 500, id: "big-eater", title: I18n.t("ach.big_eater"), icon: "\uD83C\uDFC6" }
   ];
 
   var SPECIALS = {
-    "logo-explode": { id: "logo-boom", title: "大爆炸", icon: "\uD83D\uDCA5" },
-    "console-open": { id: "hacker", title: "黑客入门", icon: "\u2328\uFE0F" },
-    "console-all-cmds": { id: "terminal-master", title: "终端大师", icon: "\uD83C\uDF9B\uFE0F" }
+    "logo-explode": { id: "logo-boom", title: I18n.t("ach.logo_boom"), icon: "\uD83D\uDCA5" },
+    "console-open": { id: "hacker", title: I18n.t("ach.hacker"), icon: "\u2328\uFE0F" },
+    "console-all-cmds": { id: "terminal-master", title: I18n.t("ach.terminal_master"), icon: "\uD83C\uDF9B\uFE0F" }
   };
 
   var TETRIS_MILESTONES = [
-    { score: 100, id: "tetris-first", title: "初次消行", icon: "\uD83E\uDDF1" },
-    { score: 500, id: "tetris-builder", title: "建筑工人", icon: "\uD83C\uDFD7\uFE0F" },
-    { score: 1000, id: "tetris-castle", title: "方块城堡", icon: "\uD83C\uDFF0" }
+    { score: 100, id: "tetris-first", title: I18n.t("ach.tetris_first"), icon: "\uD83E\uDDF1" },
+    { score: 500, id: "tetris-builder", title: I18n.t("ach.tetris_builder"), icon: "\uD83C\uDFD7\uFE0F" },
+    { score: 1000, id: "tetris-castle", title: I18n.t("ach.tetris_castle"), icon: "\uD83C\uDFF0" }
   ];
 
   var ALL_IDS = [];
@@ -49,7 +49,7 @@ var Achievements = (function () {
     counterEl = document.createElement("span");
     counterEl.className = "eat-counter nav-ach-count";
     counterEl.textContent = "\uD83C\uDFC6 0/" + TOTAL_COUNT;
-    counterEl.title = "已解锁成就";
+    counterEl.title = I18n.t("ach.unlocked");
     var navRight = document.querySelector(".nav-right");
     if (navRight) {
       var navLinks = navRight.querySelector(".nav-links");
@@ -73,7 +73,7 @@ var Achievements = (function () {
     updateCounter();
     var toast = document.createElement("div");
     toast.className = "toast";
-    toast.innerHTML = '<span class="toast-icon">' + icon + '</span><div class="toast-body"><div class="toast-title">' + title + '</div><div class="toast-sub">成就解锁！</div></div>';
+    toast.innerHTML = '<span class="toast-icon">' + icon + '</span><div class="toast-body"><div class="toast-title">' + title + '</div><div class="toast-sub">' + I18n.t("ach.toast_sub") + '</div></div>';
     toastContainer.appendChild(toast);
 
     requestAnimationFrame(function () {

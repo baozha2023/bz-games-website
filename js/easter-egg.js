@@ -25,8 +25,8 @@ var EasterEgg = (function () {
 '  |                           |\n' +
 '  +---------------------------+\n' +
 '                                                      \n' +
-'        你啃完了整个网站！\n' +
-'   文字即将重新生成...</pre>' +
+'        ' + I18n.t("easter.line1") + '\n' +
+'   ' + I18n.t("easter.line2") + '</pre>' +
 '</div>';
     document.body.appendChild(overlay);
   }

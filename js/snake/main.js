@@ -1,5 +1,11 @@
 var SnakeGame = (function () {
   var config = SnakeConfig;
+  var defaults = {
+    MOVE_MS: config.MOVE_MS,
+    SIZE: config.SIZE,
+    GRID: config.GRID,
+    EAT_MARGIN: config.EAT_MARGIN
+  };
   var stage = document.getElementById("snake-stage");
   var snake;
   var food = FoodManager;
@@ -42,6 +48,10 @@ var SnakeGame = (function () {
 
   EventBus.on("reset-snake", function () {
     if (snake) snake.destroy();
+    config.MOVE_MS = defaults.MOVE_MS;
+    config.SIZE = defaults.SIZE;
+    config.GRID = defaults.GRID;
+    config.EAT_MARGIN = defaults.EAT_MARGIN;
     snake = Snake.create(config, stage);
     var pos = getInitPos();
     snake.init(pos.x, pos.y);

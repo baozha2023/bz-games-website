@@ -6,7 +6,7 @@ var EatCounter = (function () {
     el = document.createElement("span");
     el.className = "eat-counter";
     el.textContent = "\uD83D\uDC0D \u00D7 0";
-    el.title = "已吃掉字符数";
+    el.title = I18n.t("counter.tooltip");
     var navRight = document.querySelector(".nav-right");
     if (navRight) {
       navRight.insertBefore(el, navRight.firstChild);
