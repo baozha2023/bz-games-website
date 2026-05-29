@@ -175,7 +175,13 @@ var FoodManager = (function () {
     }
 
     if (count > 0) {
-      try { EventBus.emit("food-eaten", { count: count, chars: eatenItems }); } catch (e) {}
+      var lang = (function () {
+        try { return localStorage.getItem("bz-lang") || "zh"; } catch (e) { return "zh"; }
+      })();
+      var emitCount = lang === "en" ? Math.floor(count / 2) : count;
+      if (emitCount > 0) {
+        try { EventBus.emit("food-eaten", { count: emitCount, chars: eatenItems }); } catch (e) {}
+      }
     }
     if (foods.length === 0) {
       try { EventBus.emit("all-eaten", {}); } catch (e) {}
@@ -271,7 +277,11 @@ var FoodManager = (function () {
   }
 
   function count() {
-    return foods.length;
+    var lang = (function () {
+      try { return localStorage.getItem("bz-lang") || "zh"; } catch (e) { return "zh"; }
+    })();
+    var raw = foods.length;
+    return lang === "en" ? Math.floor(raw / 2) : raw;
   }
 
   function reset() {

@@ -1,7 +1,7 @@
 .tetris-panel {
   position: fixed;
   bottom: 24px;
-  right: 24px;
+  left: 24px;
   z-index: 250;
   user-select: none;
 }

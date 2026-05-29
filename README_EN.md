@@ -42,9 +42,21 @@ thing lasts 40 seconds — watching them reassemble is oddly satisfying.
 
 ---
 
-## 🧩 Tetris in the Bottom-Right Corner
+## 🧱 404 Breakout Arcade
 
-There's a **purple gradient bubble** at the bottom-right. Click it to reveal a fully playable Tetris game!
+Visit any non-existent page (e.g. `/404`) and instead of a boring "Page Not Found", you'll get a **fully playable Breakout game**! Bricks are arranged in a "404" pattern — use your mouse to control the paddle, smash all the bricks, and a hidden download link appears. *"Lost? Why not play a round!"*
+
+---
+
+## 🖥️ Console Easter Egg
+
+Hit `F12` to open DevTools and you'll find a colorful **ASCII Art recruitment ad** — *"Love building cool stuff? We're looking for fun people!"* A little smile for fellow developers peeking under the hood.
+
+---
+
+## 🧩 Tetris in the Bottom-Left Corner
+
+There's a **purple gradient bubble** at the bottom-left. Click it to reveal a fully playable Tetris game!
 
 WASD controls, score tracking, line-clear effects — and hitting certain scores unlocks achievements. When Tetris is
 open, it takes over the keyboard from the snake so nothing clashes.
