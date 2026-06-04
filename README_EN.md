@@ -145,7 +145,7 @@ be live in three minutes.
 
 ---
 
-BZ-Games itself is a **Windows local gaming platform** — no servers needed, fully private data, supports online
-multiplayer. Check it out on [GitHub](https://github.com/baozha2023/bz-games).
+BZ-Games itself is a **local-first Windows game platform** — with game library management, a game market,
+LAN/frp/official-relay room multiplayer, achievements, statistics, BZ Coins, avatar frames, and nickname effects. Check it out on [GitHub](https://github.com/baozha2023/bz-games).
 
 MIT License © BZ-Games

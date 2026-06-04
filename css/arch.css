@@ -127,6 +127,11 @@
   color: var(--text);
 }
 
+.arch-conn-box.relay {
+  border-color: var(--accent);
+  background: rgba(124, 92, 252, 0.08);
+}
+
 .arch-conn-box .sub {
   color: var(--text2);
   font-size: 10px;
