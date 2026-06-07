@@ -58,7 +58,7 @@ var I18n = (function () {
 
       "stats.os": "支持系统",
       "stats.oss_val": "开源",
-      "stats.license": "MIT 协议",
+      "stats.license": "GPL 协议",
       "stats.local_val": "本地",
       "stats.storage": "数据存储",
       "stats.multi_val": "中英日",
@@ -147,7 +147,7 @@ var I18n = (function () {
 
       "stats.os": "Platform",
       "stats.oss_val": "Open Source",
-      "stats.license": "License",
+      "stats.license": "GPL-3.0 License",
       "stats.local_val": "Local",
       "stats.storage": "Storage",
       "stats.multi_val": "ZH/EN/JA",

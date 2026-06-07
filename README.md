@@ -135,4 +135,4 @@ WASD 操控、有分数、有消除特效，玩到一定分数还能解锁成就
 BZ-Games 本身是一个 **本地优先的 Windows 游戏平台**
 ——支持游戏库管理、游戏市场、局域网/frp/官方中继房间联机、成就统计、BZ 币、头像框与昵称特效。感兴趣的话去 [GitHub](https://github.com/baozha2023/bz-games) 看看吧。
 
-MIT License © BZ-Games
+GPL-3.0 License © BZ-Games
