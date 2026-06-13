@@ -10,7 +10,7 @@ var I18n = (function () {
 
       "hero.title1": "你的游戏，",
       "hero.title2": "你的规则",
-      "hero.desc": "BZ-Games 是一个本地优先的 Windows 游戏平台。导入、管理、市场下载、房间联机、成就统计与个性化资料都在一个客户端里完成。",
+      "hero.desc": "BZ-Games 是一个本地优先的 Windows 游戏平台。导入、管理、市场下载、房间联机、成就统计、个性化资料，以及 GitHub 登录与云端数据同步，都在一个客户端里完成。",
       "hero.download": "下载 Windows 版",
 
       "features.title": "为什么选择 BZ-Games",
@@ -39,8 +39,8 @@ var I18n = (function () {
       "games.web.title": "网络游戏",
       "games.web.desc": "远程网页游戏<br>本地存档接管",
 
-      "arch.title": "本地房间 + 可切换公网入口",
-      "arch.subtitle": "房主本机运行 RoomServer，局域网可直接发现；公网可选择用户自备 frp 直连，也可使用官方 Relay Server 短地址中继。",
+      "arch.title": "本地房间 + 可切换公网入口 + 官方中继服务",
+      "arch.subtitle": "房主本机运行 RoomServer，局域网可直接发现；公网可选择用户自备 frp 直连，也可使用官方 Relay Server 短地址中继。Relay Server 同时提供 GitHub OAuth 登录与云端数据同步。",
       "arch.host_title": "\uD83D\uDDA5\uFE0F HOST 主机",
       "arch.client_title": "\uD83D\uDCBB CLIENT 客机（可多个）",
       "arch.electron_platform": "Electron 平台进程",
@@ -99,7 +99,7 @@ var I18n = (function () {
 
       "hero.title1": "Your Games, ",
       "hero.title2": "Your Rules",
-      "hero.desc": "BZ-Games is a local-first Windows game platform. Import, manage, download from the market, play in rooms, track achievements, and personalize your profile in one client.",
+      "hero.desc": "BZ-Games is a local-first Windows game platform. Import, manage, download from the market, play in rooms, track achievements, personalize your profile, and sync with GitHub cloud login — all in one client.",
       "hero.download": "Download for Windows",
 
       "features.title": "Why BZ-Games",
