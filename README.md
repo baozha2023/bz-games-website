@@ -130,6 +130,9 @@ WASD 操控、有分数、有消除特效，玩到一定分数还能解锁成就
 
 纯静态网站，不依赖任何框架。把整个文件夹丢到 OSS + CDN、GitHub Pages、Vercel 或 Netlify 上就行，三分钟上线。
 
+Windows 下载按钮统一请求 `http://39.106.221.85/bz-games/api/v1/releases/latest/download`，不在静态页面硬编码版本号。
+服务端对所有安装包下载实施合计 50 Mbps 限流，正式 Release 由 GitHub Actions 自动同步。
+
 ---
 
 BZ-Games 本身是一个 **本地优先的 Windows 游戏平台**
