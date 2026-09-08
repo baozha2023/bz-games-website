@@ -5,7 +5,7 @@
 嗨，我是 [BZ-Games](https://github.com/baozha2023/bz-games) 的作者。这个网站本来是 BZ-Games
 的产品宣传页，但我觉得一个普通的静态页面太无聊了——所以我塞了一堆彩蛋和小游戏进去。它外表是个正经营销网站，其实是个游乐场。
 
-> 🌐 **在线访问**：http://www.bzgames.top/
+> 🌐 **在线访问**：http://official.bzgames.top/
 
 ---
 
@@ -128,9 +128,10 @@ WASD 操控、有分数、有消除特效，玩到一定分数还能解锁成就
 
 ## 📦 部署说明
 
-纯静态网站，不依赖任何框架。把整个文件夹丢到 OSS + CDN、GitHub Pages、Vercel 或 Netlify 上就行，三分钟上线。
+网站本体是无框架的纯静态页面，当前生产环境由服务器 Nginx 托管在独立域名
+`http://official.bzgames.top/`；也可以部署到其他支持静态文件托管的平台。
 
-Windows 下载按钮统一请求 `http://39.106.221.85:38090/api/v1/releases/latest/download`，不在静态页面硬编码版本号。
+Windows 下载按钮统一请求 `http://official.bzgames.top/api/v1/releases/latest/download`，不在静态页面硬编码版本号。
 服务端对所有安装包下载实施合计 100 Mbps 限流，正式 Release 由 GitHub Actions 自动同步。
 
 ---

@@ -1,1 +1,45 @@
 .idea/
+.vscode/
+
+# Dependencies, generated builds and tool caches
+node_modules/
+dist/
+build/
+out/
+coverage/
+.cache/
+.vite/
+.nyc_output/
+tmp/
+temp/
+
+# Local environment and secret material
+.env
+.env.*
+!.env.example
+*.local
+*.local.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+credentials.json
+credentials.*.json
+secrets.json
+secrets.*.json
+
+# Editor, OS and temporary files
+*.iml
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig
+*.swp
+*.swo
+*.pid
