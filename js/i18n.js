@@ -10,7 +10,7 @@ var I18n = (function () {
 
       "hero.title1": "你的游戏，",
       "hero.title2": "你的规则",
-      "hero.desc": "BZ-Games 是一个本地优先的 Windows 游戏平台。导入、管理、市场下载、房间联机、成就统计、个性化资料，以及 GitHub 登录与云端数据同步，都在一个客户端里完成。",
+      "hero.desc": "BZ-Games 是一个本地优先的 Windows 游戏平台。在一个客户端里导入和管理游戏、浏览市场、房间联机、记录成就统计，并通过本地备份保存数据。",
       "hero.download": "下载 Windows 版",
 
       "features.title": "为什么选择 BZ-Games",
@@ -18,7 +18,7 @@ var I18n = (function () {
       "features.card1.title": "开放式游戏库",
       "features.card1.desc": "支持导入任意符合规范的本地游戏，自动识别版本、封面与元数据，拖拽即玩。",
       "features.card2.title": "本地优先数据",
-      "features.card2.desc": "配置、游戏记录、统计、成就与 BZ 币都优先存储在本机，配置文件加密保存，无需注册云端账号。",
+      "features.card2.desc": "配置、游戏记录、统计、成就与 BZ 币保存在本机，无需注册即可使用。本地 V2 备份支持导出与恢复，并长期支持 V1 迁移包导入。",
       "features.card3.title": "统一联机大厅",
       "features.card3.desc": "内置创建、加入、准备、开始、聊天、踢人、解散与断线处理，游戏只需接入本地 Game API。",
       "features.card4.title": "多入口联机",
@@ -37,10 +37,10 @@ var I18n = (function () {
       "games.duo.title": "单人多模式",
       "games.duo.desc": "单人 + 联机双模式<br>灵活切换玩法",
       "games.web.title": "网络游戏",
-      "games.web.desc": "远程网页游戏<br>本地存档接管",
+      "games.web.desc": "远程网页游戏<br>从平台直接打开",
 
       "arch.title": "本地房间 + 可切换公网入口 + 官方中继服务",
-      "arch.subtitle": "房主本机运行 RoomServer，局域网可直接发现；公网可选择用户自备 frp 直连，也可使用官方 Relay Server 短地址中继。Relay Server 同时提供 GitHub OAuth 登录与云端数据同步。",
+      "arch.subtitle": "房主本机运行 RoomServer，局域网可直接发现；公网可选择自备 frp 直连或官方 Relay 中继。可选 GitHub 登录用于社区、反馈、昵称同步和在线状态，不上传平台配置或本地数据库。",
       "arch.host_title": "\uD83D\uDDA5\uFE0F HOST 主机",
       "arch.client_title": "\uD83D\uDCBB CLIENT 客机（可多个）",
       "arch.electron_platform": "Electron 平台进程",
@@ -61,7 +61,7 @@ var I18n = (function () {
       "stats.license": "GPL 协议",
       "stats.local_val": "本地",
       "stats.storage": "数据存储",
-      "stats.multi_val": "中英日",
+      "stats.multi_val": "5 种",
       "stats.multilang": "界面语言",
 
       "footer.market": "游戏市场",
@@ -99,7 +99,7 @@ var I18n = (function () {
 
       "hero.title1": "Your Games, ",
       "hero.title2": "Your Rules",
-      "hero.desc": "BZ-Games is a local-first Windows game platform. Import, manage, download from the market, play in rooms, track achievements, personalize your profile, and sync with GitHub cloud login — all in one client.",
+      "hero.desc": "BZ-Games is a local-first Windows game platform. Import and manage games, browse markets, play in rooms, track achievements and statistics, and keep local backups in one client.",
       "hero.download": "Download for Windows",
 
       "features.title": "Why BZ-Games",
@@ -107,7 +107,7 @@ var I18n = (function () {
       "features.card1.title": "Open Game Library",
       "features.card1.desc": "Import any compliant local game with automatic version, cover art and metadata detection. Drag and drop to play.",
       "features.card2.title": "Local-First Data",
-      "features.card2.desc": "Settings, play records, statistics, achievements, and BZ Coins stay on your PC first, with encrypted config storage and no cloud account required.",
+      "features.card2.desc": "Settings, play records, statistics, achievements, and BZ Coins stay on your PC without registration. Export and restore V2 local backups, with continued support for importing V1 migration bundles.",
       "features.card3.title": "Unified Multiplayer Lobby",
       "features.card3.desc": "Create, join, ready, start, chat, kick, disband, and handle reconnects. Games only need to integrate the local Game API.",
       "features.card4.title": "Multiple Online Entries",
@@ -126,10 +126,10 @@ var I18n = (function () {
       "games.duo.title": "Single+Multi",
       "games.duo.desc": "Single + multiplayer dual mode<br>Switch gameplay anytime",
       "games.web.title": "Web Games",
-      "games.web.desc": "Remote web games<br>Local storage takeover",
+      "games.web.desc": "Remote web games<br>Open directly from the platform",
 
       "arch.title": "Local Rooms + Switchable Public Entries",
-      "arch.subtitle": "The host runs RoomServer locally. LAN discovery works directly, while public play can use self-hosted frp direct links or official Relay Server short addresses.",
+      "arch.subtitle": "The host runs RoomServer locally. Use LAN discovery, your own frp connection, or the official relay. Optional GitHub login serves community features, feedback, nickname sync, and presence; platform configuration and the local database are not uploaded.",
       "arch.host_title": "\uD83D\uDDA5\uFE0F HOST",
       "arch.client_title": "\uD83D\uDCBB CLIENT (multiple)",
       "arch.electron_platform": "Electron Platform",
@@ -150,7 +150,7 @@ var I18n = (function () {
       "stats.license": "GPL-3.0 License",
       "stats.local_val": "Local",
       "stats.storage": "Storage",
-      "stats.multi_val": "ZH/EN/JA",
+      "stats.multi_val": "5",
       "stats.multilang": "UI Languages",
 
       "footer.market": "Game Market",

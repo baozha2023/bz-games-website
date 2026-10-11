@@ -46,7 +46,7 @@
 <header class="hero">
   <div class="container">
     <h1><span data-i18n="hero.title1">你的游戏，</span><span data-i18n="hero.title2">你的规则</span></h1>
-    <p data-i18n="hero.desc">BZ-Games 是一个本地优先的 Windows 游戏平台。导入、管理、市场下载、房间联机、成就统计与个性化资料都在一个客户端里完成。</p>
+    <p data-i18n="hero.desc">BZ-Games 是一个本地优先的 Windows 游戏平台。在一个客户端里导入和管理游戏、浏览市场、房间联机、记录成就统计，并通过本地备份保存数据。</p>
     <div class="hero-buttons">
       <a class="btn btn-primary" href="http://official.bzgames.top/api/v1/releases/latest/download">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -77,7 +77,7 @@
       <div class="feature-card">
         <div class="feature-icon fi-green">🔌</div>
         <h3 data-i18n="features.card2.title">本地优先数据</h3>
-        <p data-i18n="features.card2.desc">配置、游戏记录、统计、成就与 BZ 币都优先存储在本机，配置文件加密保存，无需注册云端账号。</p>
+        <p data-i18n="features.card2.desc">配置、游戏记录、统计、成就与 BZ 币保存在本机，无需注册即可使用。本地 V2 备份支持导出与恢复，并长期支持 V1 迁移包导入。</p>
       </div>
 
       <div class="feature-card">
@@ -134,7 +134,7 @@
       <div class="type-card">
         <div class="icon">🌍</div>
         <h3 data-i18n="games.web.title">网络游戏</h3>
-        <p data-i18n-html="games.web.desc">远程网页游戏<br>本地存档接管</p>
+        <p data-i18n-html="games.web.desc">远程网页游戏<br>从平台直接打开</p>
       </div>
 
     </div>
@@ -145,7 +145,7 @@
   <div class="container">
     <div class="section-header">
       <h2 data-i18n="arch.title">本地房间 + 可切换公网入口</h2>
-      <p data-i18n="arch.subtitle">房主本机运行 RoomServer，局域网可直接发现；公网可选择用户自备 frp 直连，也可使用官方 Relay Server 短地址中继。</p>
+      <p data-i18n="arch.subtitle">房主本机运行 RoomServer，局域网可直接发现；公网可选择自备 frp 直连或官方 Relay 中继。可选 GitHub 登录用于社区、反馈、昵称同步和在线状态，不上传平台配置或本地数据库。</p>
     </div>
     <div class="arch-wrapper">
 
@@ -158,7 +158,7 @@
             <div class="arch-arrow-h">⟷ IPC</div>
             <div class="arch-module highlight">
               <span data-i18n="arch.main_process">主进程</span>
-              <div class="sub">GameManager · RoomServer · RelayRoomService · GameApiServer · CloudSyncService</div>
+              <div class="sub">GameManager · RoomServer · RelayRoomService · GameApiServer · AccountService</div>
             </div>
             <div class="arch-arrow-out">→</div>
             <div style="font-size: 10px; color: var(--text2); writing-mode: vertical-rl;" data-i18n="arch.public_entry">公网入口</div>
@@ -231,7 +231,7 @@
         <div class="stat-label" data-i18n="stats.storage">数据存储</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num" data-i18n="stats.multi_val">中英日</div>
+        <div class="stat-num" data-i18n="stats.multi_val">5 种</div>
         <div class="stat-label" data-i18n="stats.multilang">界面语言</div>
       </div>
     </div>

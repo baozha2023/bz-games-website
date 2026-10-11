@@ -6,7 +6,7 @@ Hey there, I'm the creator of [BZ-Games](https://github.com/baozha2023/bz-games)
 page, but a plain static page felt too boring — so I stuffed it full of easter eggs and mini-games. It looks like a
 serious marketing site, but it's actually a playground.
 
-> 🌐 **Live Access**: http://official.bzgames.top/
+> 🌐 **Live Access**: http://www.bzgames.top/
 
 ---
 
@@ -141,7 +141,7 @@ What I've shown you above is the "official" list. Think there's more? Try for yo
 ## 📦 Deployment
 
 The site is framework-free and fully static. Production is currently served by Nginx at
-`http://official.bzgames.top/`, while any static hosting platform remains compatible.
+`http://www.bzgames.top/`, while any static hosting platform remains compatible.
 
 ---
 
